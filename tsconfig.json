@@ -12,6 +12,13 @@
     },
     {
       "path": "./tsconfig.spec.json"
-    }
+    },
+    {
+      "path": "./projects/ax-autocomplete/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ax-autocomplete/tsconfig.spec.json"
+    },
+
 ]
 }

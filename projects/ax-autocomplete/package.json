@@ -1,0 +1,33 @@
+{
+  "name": "@alexotano/ax-autocomplete",
+  "version": "0.0.1",
+  "description": "An Autocomplete fast, that works with local arrays, main feature is fully configurable and it full screen on mobile devices",
+  "author": "Alex Otano",
+  "peerDependencies": {
+    "@angular/common": "^10.0.11",
+    "@angular/core": "^10.0.11"
+  },
+  "private":false,
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/ALEXOTANO/ax-autocomplete/issues"
+  },
+  "deprecated": false,
+  "homepage": "https://github.com/ALEXOTANO/ax-autocomplete#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALEXOTANO/ax-autocomplete.git"
+  },
+  "keywords": [
+    "angular",
+    "autocomplete",
+    "typeahead",
+    "auto complete",
+    "material",
+    "mobile",
+    "desktop"
+  ]
+}

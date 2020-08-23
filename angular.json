@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AutocompleteLibrary": {
+    "autocomplete-library": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/AutocompleteLibrary",
+            "outputPath": "dist/autocomplete-library",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AutocompleteLibrary:build"
+            "browserTarget": "autocomplete-library:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "AutocompleteLibrary:build:production"
+              "browserTarget": "autocomplete-library:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AutocompleteLibrary:build"
+            "browserTarget": "autocomplete-library:build"
           }
         },
         "test": {
@@ -114,15 +114,95 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "AutocompleteLibrary:serve"
+            "devServerTarget": "autocomplete-library:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "AutocompleteLibrary:serve:production"
+              "devServerTarget": "autocomplete-library:serve:production"
             }
           }
         }
       }
+    },
+    "ax-autocomplete": {
+      "projectType": "library",
+      "root": "projects/ax-autocomplete",
+      "sourceRoot": "projects/ax-autocomplete/src",
+      "prefix": "Ax",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ax-autocomplete/tsconfig.lib.json",
+            "project": "projects/ax-autocomplete/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ax-autocomplete/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ax-autocomplete/src/test.ts",
+            "tsConfig": "projects/ax-autocomplete/tsconfig.spec.json",
+            "karmaConfig": "projects/ax-autocomplete/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ax-autocomplete/tsconfig.lib.json",
+              "projects/ax-autocomplete/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "AxAutocomplete22": {
+      "projectType": "library",
+      "root": "projects/ax-autocomplete22",
+      "sourceRoot": "projects/ax-autocomplete22/src",
+      "prefix": "Ax22",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ax-autocomplete22/tsconfig.lib.json",
+            "project": "projects/ax-autocomplete22/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ax-autocomplete22/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ax-autocomplete22/src/test.ts",
+            "tsConfig": "projects/ax-autocomplete22/tsconfig.spec.json",
+            "karmaConfig": "projects/ax-autocomplete22/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ax-autocomplete22/tsconfig.lib.json",
+              "projects/ax-autocomplete22/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
-  "defaultProject": "AutocompleteLibrary"
+  "defaultProject": "autocomplete-library"
 }

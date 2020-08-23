@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'AutocompleteLibrary'`, () => {
+  it(`should have as title 'autocomplete-library'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('AutocompleteLibrary');
+    expect(app.title).toEqual('autocomplete-library');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('AutocompleteLibrary app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('autocomplete-library app is running!');
   });
 });
